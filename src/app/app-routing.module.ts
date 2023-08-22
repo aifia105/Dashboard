@@ -5,7 +5,7 @@ import { AuthentificationComponent } from './components/authentification/authent
 
 const routes: Routes = [
   {path: "", redirectTo:'/authentification', pathMatch: "full"},
-  {path: "/authentification", data: {breadcrumb:"Authentification"} , component: AuthentificationComponent }
+  {path: "authentification", data: {breadcrumb:"Authentification"} , component: AuthentificationComponent }
 ];
 
 @NgModule({
