@@ -20,7 +20,7 @@ export class AuthentificationComponent  {
   onSubmit(): void{
 
     console.log(this.authentificationRequest.Login);
-    console.log(this.authentificationRequest.password);
+    console.log(this.authentificationRequest .password);
     console.log(this.authentificationRequest);
   }
 }
