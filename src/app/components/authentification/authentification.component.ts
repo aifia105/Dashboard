@@ -1,11 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { authentification } from 'src/app/shared/models/authentication';
 
-const authentificationInterface : authentification = {
-  Login : "",
-  password : ""
-} ;
 
 @Component({
   selector: 'app-authentification',
@@ -14,13 +10,18 @@ const authentificationInterface : authentification = {
 })
 export class AuthentificationComponent  {
 
-  authentificationRequest = authentificationInterface;
+  authFrom = new FormGroup({
+    login: new FormControl('',[Validators.required, Validators.email]),
+    password: new FormControl('',[Validators.required, Validators.minLength(8)])
+  });
+
+  
   
 
   onSubmit(): void{
-
-    console.log(this.authentificationRequest.Login);
-    console.log(this.authentificationRequest .password);
-    console.log(this.authentificationRequest);
+   
+    console.log(this.authFrom.value);
+    console.log(this.authFrom.value.login);
+    console.log(this.authFrom.value.password);
   }
 }
