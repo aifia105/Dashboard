@@ -11,6 +11,8 @@ import { AuthentificationComponent } from './components/authentification/authent
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { MatIconModule } from '@angular/material/icon';
 import { SideNavbarComponent } from './components/side-navbar/side-navbar.component';
+import { ProductsComponent } from './components/products/products.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -18,7 +20,8 @@ import { SideNavbarComponent } from './components/side-navbar/side-navbar.compon
     AppComponent,
     AuthentificationComponent,
     NavbarComponent,
-    SideNavbarComponent
+    SideNavbarComponent,
+    ProductsComponent
 
 
   ],
@@ -29,8 +32,9 @@ import { SideNavbarComponent } from './components/side-navbar/side-navbar.compon
     CommonModule,
     ReactiveFormsModule,
     FormsModule,
-    MatIconModule
-  ],
+    MatIconModule,
+    RouterModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

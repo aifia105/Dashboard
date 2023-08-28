@@ -31,7 +31,7 @@
                         <div class="absolute inset-y-0 left-0 flex items-center pl-1 pointer-events-none ">
                             <mat-icon class=" w-7 h-7 stroke-current text-gray-500" view-Box="002424">dashboard</mat-icon>
                            </div>
-                            <a href="#" class="inline-block w-full pr-4 pl-8 py-3 text-xs hover:bg-gray-800 rounded">Dashboard</a>
+                            <a href="#" class="inline-block w-full pr-4 pl-8 py-3 text-xs hover:bg-gray-800 rounded">Overview</a>
                     </div>
                     <button  class="absolute right-0 p-1 flex items-center" (click)="toggleExpanded(1)">
                         <mat-icon class="w-7 h-7 stroke-current text-gray-500" view-Box="002424" >expand_more</mat-icon>
@@ -41,7 +41,7 @@
                     <ul class="flex flex-col pl-2 text-gray-500 border-l border-gray-700">
                         <li><a href="#" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Sales Data</a></li>
                         <li><a href="#" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Inventorry Status</a></li>
-                        <li><a href="#" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Inventorry Status</a></li>
+                        <li><a href="#" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Visitor Traffic</a></li>
 
                     </ul>
 
@@ -68,9 +68,9 @@
                    </div>
                    <div class="pt-2 pl-4" *ngIf="Product">
                     <ul class="flex flex-col pl-2 text-gray-500 border-l border-gray-700">
-                        <li><a href="#" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Sales Data</a></li>
-                        <li><a href="#" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Inventorry Status</a></li>
-                        <li><a href="#" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Inventorry Status</a></li>
+                        <li><a href="#" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Product Catalog</a></li>
+                        <li><a href="#" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Inventory Management</a></li>
+                        <li><a href="#" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Product Performance</a></li>
 
                     </ul>
 
@@ -97,9 +97,9 @@
                    </div>
                    <div class="pt-2 pl-4" *ngIf="Orders">
                     <ul class="flex flex-col pl-2 text-gray-500 border-l border-gray-700">
-                        <li><a href="#" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Sales Data</a></li>
-                        <li><a href="#" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Inventorry Status</a></li>
-                        <li><a href="#" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Inventorry Status</a></li>
+                        <li><a href="#" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Order List</a></li>
+                        <li><a href="#" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Order Tracking</a></li>
+                        <li><a href="#" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Order Processing</a></li>
 
                     </ul>
 
@@ -125,9 +125,9 @@
                        </div>
                        <div class="pt-2 pl-4" *ngIf="Customer">
                         <ul class="flex flex-col pl-2 text-gray-500 border-l border-gray-700">
-                            <li><a href="#" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Sales Data</a></li>
-                            <li><a href="#" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Inventorry Status</a></li>
-                            <li><a href="#" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Inventorry Status</a></li>
+                            <li><a href="#" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Customer Profiles</a></li>
+                            <li><a href="#" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Segmentation</a></li>
+                            <li><a href="#" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Personalization</a></li>
     
                         </ul>
     
@@ -154,9 +154,9 @@
                        </div>
                        <div class="pt-2 pl-4" *ngIf="Supplies">
                         <ul class="flex flex-col pl-2 text-gray-500 border-l border-gray-700">
-                            <li><a href="#" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Sales Data</a></li>
-                            <li><a href="#" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Inventorry Status</a></li>
-                            <li><a href="#" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Inventorry Status</a></li>
+                            <li><a href="#" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Supplies List</a></li>
+                            <li><a href="#" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Orders To Supplies</a></li>
+                            <li><a href="#" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Supplies Management</a></li>
     
                         </ul>
     
@@ -183,7 +183,7 @@
                        </div>
                        <div class="pt-2 pl-4" *ngIf="User_Management">
                         <ul class="flex flex-col pl-2 text-gray-500 border-l border-gray-700">
-                            <li><a href="#" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Sales Data</a></li>
+                            <li><a href="#" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Admins List</a></li>
                             <li><a href="#" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Inventorry Status</a></li>
                             <li><a href="#" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Inventorry Status</a></li>
     
@@ -212,10 +212,8 @@
                        </div>
                        <div class="pt-2 pl-4" *ngIf="Reporting">
                         <ul class="flex flex-col pl-2 text-gray-500 border-l border-gray-700">
-                            <li><a href="#" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Sales Data</a></li>
-                            <li><a href="#" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Inventorry Status</a></li>
-                            <li><a href="#" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Inventorry Status</a></li>
-    
+                            <li><a href="#" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Custom Reports</a></li>
+                            <li><a href="#" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Admin Reports</a></li>
                         </ul>
     
                       </div>

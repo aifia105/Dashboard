@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {MatIconModule} from '@angular/material/icon'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -7,5 +7,13 @@ import {MatIconModule} from '@angular/material/icon'
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
+  constructor(private route: Router){
+
+  }
+
+  logout(){
+    this.route.navigate(['/authentication']);
+ 
+  }
 
 }
