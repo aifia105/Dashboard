@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-side-navbar',
@@ -13,6 +14,9 @@ export class SideNavbarComponent {
     Supplies : boolean = false  
     User_Management  : boolean = false  
     Reporting : boolean = false  
+    constructor(private route: Router){
+
+    }
   
  toggleExpanded(index : Number): void{
   switch(index){
@@ -42,5 +46,8 @@ export class SideNavbarComponent {
  
   }
  }
+ account(){
+  this.route.navigate(['/settings']);
 
+ }
 }
