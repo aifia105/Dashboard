@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -50,4 +50,9 @@ export class SideNavbarComponent {
   this.route.navigate(['/settings']);
 
  }
+ @Output() itemSelected = new EventEmitter<string>;
+ selectItem(item : string){
+  this.itemSelected.emit(item);
+ }
+
 }

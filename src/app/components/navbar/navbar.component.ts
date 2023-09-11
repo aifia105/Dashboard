@@ -12,7 +12,7 @@ export class NavbarComponent {
   }
 
   logout(){
-    this.route.navigate(['/authentication']);
+    this.route.navigate(['authentication']);
  
   }
 

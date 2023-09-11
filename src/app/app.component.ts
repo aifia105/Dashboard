@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   title = 'Jemo-front';
-  isAuthenticated:boolean = false;
+  isAuthenticated:boolean = true;
 
   ngOnInit(): void {
       this.isAuthenticated = this.isAuthenticated

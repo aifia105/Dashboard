@@ -28,51 +28,57 @@ import { AdminsListComponent } from './components/user-management/admins-list/ad
 import { AdminsManagementComponent } from './components/user-management/admins-management/admins-management.component';
 import { NotificationsComponent } from './components/notifications/notifications.component';
 import { SettingsComponent } from './components/settings/settings.component';
+import { HomeComponent } from './components/home/home.component';
+import { authGuardGuard } from './guard/auth-guard.guard';
 
 
 const routes: Routes = [
 
-  {path: "customer-insights", data: {breadcrumb:"CustomerInsights"} , component: CustomerInsightsComponent , children: [
-    {path: "customer-profiles", data: {breadcrumb:"CustomerProfiles"} , component: CustomerProfilesComponent},
-    {path: "segmentation", data: {breadcrumb:"Segmentation"} , component: SegmentationComponent}
+  {path: "", data: {breadcrumb:"CustomerInsights"} , redirectTo: "home" , pathMatch :"full"},
+
+  {path: "home", data: {breadcrumb:"Home"} , component: HomeComponent , canActivate: [authGuardGuard] },
+
+  {path: "customer-insights", data: {breadcrumb:"CustomerInsights"} , component: CustomerInsightsComponent , canActivate: [authGuardGuard], children: [
+    {path: "customer-profiles", data: {breadcrumb:"CustomerProfiles"} , canActivate: [authGuardGuard] , component: CustomerProfilesComponent},
+    {path: "segmentation", data: {breadcrumb:"Segmentation"} , canActivate: [authGuardGuard] , component: SegmentationComponent}
   ]},
 
-  {path: "orders", data: {breadcrumb:"Orders"} , component: OrdersComponent , children: [
-    {path: "orders-list", data: {breadcrumb:"OrderList"} , component: OrderListComponent},
-    {path: "orders-processing", data: {breadcrumb:"OrderProcessing"} , component: OrderProcessingComponent},
-    {path: "orders-tracking", data: {breadcrumb:"OrderTracking"} , component: OrderTrackingComponent}
+  {path: "orders", data: {breadcrumb:"Orders"} , component: OrdersComponent , canActivate: [authGuardGuard] , children: [
+    {path: "orders-list", data: {breadcrumb:"OrderList"} , canActivate: [authGuardGuard] , component: OrderListComponent},
+    {path: "orders-processing", data: {breadcrumb:"OrderProcessing"} , canActivate: [authGuardGuard] , component: OrderProcessingComponent},
+    {path: "orders-tracking", data: {breadcrumb:"OrderTracking"} , canActivate: [authGuardGuard] , component: OrderTrackingComponent}
   ]},
 
-  {path: "overview", data: {breadcrumb:"Orders"} , component: OverviewComponent , children: [
-    {path: "data-sales", data: {breadcrumb:"DataSales"} , component: DataSalesComponent},
-    {path: "inventorry-satuts", data: {breadcrumb:"InventorrySatuts"} , component: InventorrySatutsComponent},
-    {path: "visitor-traffic", data: {breadcrumb:"VisitorTraffic"} , component: VisitorTrafficComponent}
+  {path: "overview", data: {breadcrumb:"Orders"} , component: OverviewComponent , canActivate: [authGuardGuard] , children: [
+    {path: "data-sales", data: {breadcrumb:"DataSales"} , canActivate: [authGuardGuard] , component: DataSalesComponent},
+    {path: "inventorry-satuts", data: {breadcrumb:"InventorrySatuts"} , canActivate: [authGuardGuard] , component: InventorrySatutsComponent},
+    {path: "visitor-traffic", data: {breadcrumb:"VisitorTraffic"} , canActivate: [authGuardGuard] , component: VisitorTrafficComponent}
   ]},
 
-  {path: "product", data: {breadcrumb:"Product"} , component: ProductComponent , children: [
-    {path: "product-catalog", data: {breadcrumb:"ProductCatalog"} , component: ProductCatalogComponent},
-    {path: "inventorry-management", data: {breadcrumb:"InventorryManagement"} , component: InventorryManagementComponent},
-    {path: "product-performance", data: {breadcrumb:"ProductPerformance"} , component: ProductPerformanceComponent}
+  {path: "product", data: {breadcrumb:"Product"} , component: ProductComponent , canActivate: [authGuardGuard] , children: [
+    {path: "product-catalog", data: {breadcrumb:"ProductCatalog"} , canActivate: [authGuardGuard] , component: ProductCatalogComponent},
+    {path: "inventorry-management", data: {breadcrumb:"InventorryManagement"} , canActivate: [authGuardGuard] , component: InventorryManagementComponent},
+    {path: "product-performance", data: {breadcrumb:"ProductPerformance"} , canActivate: [authGuardGuard] , component: ProductPerformanceComponent}
   ]},
 
-  {path: "reporting", data: {breadcrumb:"Reporting"} , component: ReportingComponent , children: [
-    {path: "admin-reports", data: {breadcrumb:"AdminReports"} , component: AdminReportsComponent},
-    {path: "client-reports", data: {breadcrumb:"ClientReports"} , component: ClientReportsComponent}
+  {path: "reporting", data: {breadcrumb:"Reporting"} , canActivate: [authGuardGuard] , component: ReportingComponent , children: [
+    {path: "admin-reports", data: {breadcrumb:"AdminReports"} , canActivate: [authGuardGuard] , component: AdminReportsComponent},
+    {path: "client-reports", data: {breadcrumb:"ClientReports"} , canActivate: [authGuardGuard] , component: ClientReportsComponent}
   ]},
 
-  {path: "supplier", data: {breadcrumb:"Suppliers"} , component: SuppliersComponent , children: [
-    {path: "supplier-list", data: {breadcrumb:"SuppliesList"} , component: SuppliesListComponent},
-    {path: "supplier-management", data: {breadcrumb:"SuppliesManagement"} , component: SuppliesManagementComponent}
+  {path: "supplier", data: {breadcrumb:"Suppliers"} , canActivate: [authGuardGuard] , component: SuppliersComponent , children: [
+    {path: "supplier-list", data: {breadcrumb:"SuppliesList"} , canActivate: [authGuardGuard] , component: SuppliesListComponent},
+    {path: "supplier-management", data: {breadcrumb:"SuppliesManagement"} , canActivate: [authGuardGuard] , component: SuppliesManagementComponent}
   ]},
 
-  {path: "user-management", data: {breadcrumb:"Suppliers"} , component: UserManagementComponent , children: [
-    {path: "admins-list", data: {breadcrumb:"SuppliesList"} , component: AdminsListComponent},
-    {path: "admins-management", data: {breadcrumb:"SuppliesManagement"} , component: AdminsManagementComponent}
+  {path: "user-management", data: {breadcrumb:"Suppliers"} , canActivate: [authGuardGuard] , component: UserManagementComponent , children: [
+    {path: "admins-list", data: {breadcrumb:"SuppliesList"} , canActivate: [authGuardGuard] , component: AdminsListComponent},
+    {path: "admins-management", data: {breadcrumb:"SuppliesManagement"} , canActivate: [authGuardGuard] , component: AdminsManagementComponent}
   ]},
 
-  {path: "notifications", data: {breadcrumb:"Notifications"} , component: NotificationsComponent },
+  {path: "notifications", data: {breadcrumb:"Notifications"} , canActivate: [authGuardGuard] , component: NotificationsComponent },
 
-  {path: "settings", data: {breadcrumb:"Settings"} , component: SettingsComponent },
+  {path: "settings", data: {breadcrumb:"Settings"} , canActivate: [authGuardGuard] , component: SettingsComponent },
 
   {path: "authentication", data: {breadcrumb:"Authentification"} , component: AuthentificationComponent },
 
@@ -81,6 +87,6 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule { }

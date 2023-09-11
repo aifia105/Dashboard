@@ -39,6 +39,7 @@ import { ClientReportsComponent } from './components/reporting/client-reports/cl
 import { AdminReportsComponent } from './components/reporting/admin-reports/admin-reports.component';
 import { AdminsManagementComponent } from './components/user-management/admins-management/admins-management.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
+import { HomeComponent } from './components/home/home.component';
 
 
 
@@ -74,7 +75,8 @@ import { NotfoundComponent } from './components/notfound/notfound.component';
     ClientReportsComponent,
     AdminReportsComponent,
     AdminsManagementComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    HomeComponent
 
 
   ],

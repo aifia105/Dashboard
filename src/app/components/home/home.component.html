@@ -1,0 +1,22 @@
+<app-navbar></app-navbar>
+
+<hr class="border-gray-700">
+
+<div class="flex items-start justify-normal">
+    <div class="flex flex-row">
+        <app-side-navbar (itemSelected)="selectedItem = $event"></app-side-navbar>
+        
+    </div>
+    
+    <div class="flex items-start justify-normal w-full">
+        <div>
+            <ng-container *ngIf="selectedItem === 'Dashboard'">
+                
+              </ng-container>
+        </div>
+        
+    </div>
+    
+</div>
+    
+    
