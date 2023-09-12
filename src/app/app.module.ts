@@ -40,6 +40,7 @@ import { AdminReportsComponent } from './components/reporting/admin-reports/admi
 import { AdminsManagementComponent } from './components/user-management/admins-management/admins-management.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { HomeComponent } from './components/home/home.component';
+import { authGuardGuard } from './guard/auth-guard.guard';
 
 
 
