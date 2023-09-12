@@ -1,7 +1,7 @@
 <div class=" w-64 h-screen bg-gray-900 rounded-md overflow-y-scroll">
     <div class="px-6 pt-8">
         <div class="flex items-center justify-between">
-            <a routerLink="/overview" class="p-1 flex items-center justify-center bg-white rounded focus:outline-none focus:ring-1 focus:ring-white focus:ring-offset-2">
+            <a routerLink="/home" class="p-1 flex items-center justify-center bg-white rounded focus:outline-none focus:ring-1 focus:ring-white focus:ring-offset-2">
                 <mat-icon class="w-5 h-5 stroke-current">layers</mat-icon>
             </a>
             <button class="flex items-center justify-center p-0.5 rounded bg-gray-800">
@@ -31,7 +31,7 @@
                         <div class="absolute inset-y-0 left-0 flex items-center pl-1 pointer-events-none ">
                             <mat-icon class=" w-7 h-7 stroke-current text-gray-500" view-Box="002424">dashboard</mat-icon>
                            </div>
-                            <a routerLink="overview" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" class="inline-block w-full pr-4 pl-8 py-3 text-xs hover:bg-gray-800 rounded">Overview</a>
+                            <a (click)="selectItem('Dashboard')" routerLinkActive="active" class="inline-block w-full pr-4 pl-8 py-3 text-xs hover:bg-gray-800 rounded">Overview</a>
                     </div>
                     <button  class="absolute right-0 p-1 flex items-center" (click)="toggleExpanded(1)">
                         <mat-icon class="w-7 h-7 stroke-current text-gray-500" view-Box="002424" >expand_more</mat-icon>
@@ -39,9 +39,9 @@
                   </div>
                   <div class="pt-2 pl-4" *ngIf="Dashboard">
                     <ul class="flex flex-col pl-2 text-gray-500 border-l border-gray-700">
-                        <li><a routerLink="/overview/data-sales" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Sales Data</a></li>
-                        <li><a routerLink="/overview/inventorry-satuts" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Inventorry Status</a></li>
-                        <li><a routerLink="/overview/visitor-traffic" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Visitor Traffic</a></li>
+                        <li><a (click)="selectItem('Sales-Data')" routerLinkActive="active" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Sales Data</a></li>
+                        <li><a (click)="selectItem('Inventorry-Status')" routerLinkActive="active" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Inventorry Status</a></li>
+                        <li><a (click)="selectItem('Visitor-Traffic')" routerLinkActive="active" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Visitor Traffic</a></li>
 
                     </ul>
 
@@ -60,7 +60,7 @@
                         <div class="absolute inset-y-0 left-0 flex items-center pl-1">
                             <mat-icon class=" w-7 h-7 stroke-current text-gray-500" view-Box="002424">local_mall</mat-icon>
                            </div>
-                            <a routerLink="/product" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" class="inline-block w-full pr-4 pl-8 py-3 text-xs hover:bg-gray-800 rounded">Product</a>
+                            <a (click)="selectItem('Product')" routerLinkActive="active" class="inline-block w-full pr-4 pl-8 py-3 text-xs hover:bg-gray-800 rounded">Product</a>
                     </div>
                     <button class="absolute right-0 p-1 flex items-center" (click)="toggleExpanded(2)">
                         <mat-icon class="w-7 h-7 stroke-current text-gray-500" view-Box="002424" >expand_more</mat-icon>
@@ -68,9 +68,9 @@
                    </div>
                    <div class="pt-2 pl-4" *ngIf="Product">
                     <ul class="flex flex-col pl-2 text-gray-500 border-l border-gray-700">
-                        <li><a routerLink="/product/product-catalog" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Product Catalog</a></li>
-                        <li><a routerLink="/product/inventorry-management" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Inventory Management</a></li>
-                        <li><a routerLink="/product/product-performance" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Product Performance</a></li>
+                        <li><a (click)="selectItem('Product-Catalog')" routerLinkActive="active" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Product Catalog</a></li>
+                        <li><a (click)="selectItem('Inventory-Management')" routerLinkActive="active" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Inventory Management</a></li>
+                        <li><a (click)="selectItem('Product-Performance')" routerLinkActive="active" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Product Performance</a></li>
 
                     </ul>
 
@@ -89,7 +89,7 @@
                         <div class="absolute inset-y-0 left-0 flex items-center pl-1">
                             <mat-icon class=" w-7 h-7 stroke-current text-gray-500" view-Box="002424">local_grocery_store</mat-icon>
                            </div>
-                            <a routerLink="/orders" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" class="inline-block w-full pr-4 pl-8 py-3 text-xs hover:bg-gray-800 rounded">Orders</a>
+                            <a (click)="selectItem('Orders')" routerLinkActive="active" class="inline-block w-full pr-4 pl-8 py-3 text-xs hover:bg-gray-800 rounded">Orders</a>
                     </div>
                     <button class="absolute right-0 p-1 flex items-center" (click)="toggleExpanded(3)">
                         <mat-icon class="w-7 h-7 stroke-current text-gray-500" view-Box="002424" >expand_more</mat-icon>
@@ -97,9 +97,9 @@
                    </div>
                    <div class="pt-2 pl-4" *ngIf="Orders">
                     <ul class="flex flex-col pl-2 text-gray-500 border-l border-gray-700">
-                        <li><a routerLink="/orders/orders-list" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Order List</a></li>
-                        <li><a routerLink="/orders/orders-processing" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Order Tracking</a></li>
-                        <li><a routerLink="/orders/orders-tracking" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Order Processing</a></li>
+                        <li><a (click)="selectItem('Order-List')" routerLinkActive="active" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Order List</a></li>
+                        <li><a (click)="selectItem('Order-Tracking')" routerLinkActive="active" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Order Tracking</a></li>
+                        <li><a (click)="selectItem('Order-Processing')" routerLinkActive="active" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Order Processing</a></li>
 
                     </ul>
 
@@ -117,7 +117,7 @@
                             <div class="absolute inset-y-0 left-0 flex items-center pl-1">
                                 <mat-icon class=" w-7 h-7 stroke-current text-gray-500" view-Box="002424">people</mat-icon>
                                </div>
-                                <a routerLink="/customer-insights" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" class="inline-block w-full pr-4 pl-8 py-3 text-xs hover:bg-gray-800 rounded">Customer Insights</a>
+                                <a (click)="selectItem('Customer-Insights')"  routerLinkActive="active" class="inline-block w-full pr-4 pl-8 py-3 text-xs hover:bg-gray-800 rounded">Customer Insights</a>
                         </div>
                         <button class="absolute right-0 p-1 flex items-center" (click)="toggleExpanded(4)">
                             <mat-icon class="w-7 h-7 stroke-current text-gray-500" view-Box="002424" >expand_more</mat-icon>
@@ -125,8 +125,8 @@
                        </div>
                        <div class="pt-2 pl-4" *ngIf="Customer">
                         <ul class="flex flex-col pl-2 text-gray-500 border-l border-gray-700">
-                            <li><a routerLink="/customer-insights/customer-profiles" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Customer Profiles</a></li>
-                            <li><a routerLink="/customer-insights/segmentation" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Segmentation</a></li>
+                            <li><a (click)="selectItem('Customer-Profiles')"  class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Customer Profiles</a></li>
+                            <li><a (click)="selectItem('Segmentation')"  class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Segmentation</a></li>
     
                         </ul>
     
@@ -145,7 +145,7 @@
                             <div class="absolute inset-y-0 left-0 flex items-center pl-1">
                                 <mat-icon class=" w-7 h-7 stroke-current text-gray-500" view-Box="002424">local_shipping</mat-icon>
                                </div>
-                                <a routerLink="/supplier" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" class="inline-block w-full pr-4 pl-8 py-3 text-xs hover:bg-gray-800 rounded">Supplies</a>
+                                <a (click)="selectItem('Supplies')"  routerLinkActive="active" class="inline-block w-full pr-4 pl-8 py-3 text-xs hover:bg-gray-800 rounded">Supplies</a>
                         </div>
                         <button class="absolute right-0 p-1 flex items-center" (click)="toggleExpanded(5)">
                             <mat-icon class="w-7 h-7 stroke-current text-gray-500" view-Box="002424" >expand_more</mat-icon>
@@ -153,8 +153,8 @@
                        </div>
                        <div class="pt-2 pl-4" *ngIf="Supplies">
                         <ul class="flex flex-col pl-2 text-gray-500 border-l border-gray-700">
-                            <li><a routerLink="/supplier/supplier-list" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Supplies List</a></li>
-                            <li><a routerLink="/supplier/supplier-management" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Supplies Management</a></li>
+                            <li><a (click)="selectItem('Supplies-List')"  routerLinkActive="active" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Supplies List</a></li>
+                            <li><a (click)="selectItem('Supplies-Management')"  routerLinkActive="active" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Supplies Management</a></li>
     
                         </ul>
     
@@ -173,7 +173,7 @@
                             <div class="absolute inset-y-0 left-0 flex items-center pl-1">
                                 <mat-icon class=" w-7 h-7 stroke-current text-gray-500" view-Box="002424">person</mat-icon>
                                </div>
-                                <a routerLink="/user-management" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" class="inline-block w-full pr-4 pl-8 py-3 text-xs hover:bg-gray-800 rounded">User Management</a>
+                                <a (click)="selectItem('User-Management')" routerLinkActive="active" class="inline-block w-full pr-4 pl-8 py-3 text-xs hover:bg-gray-800 rounded">User Management</a>
                         </div>
                         <button class="absolute right-0 p-1 flex items-center" (click)="toggleExpanded(6)">
                             <mat-icon class="w-7 h-7 stroke-current text-gray-500" view-Box="002424" >expand_more</mat-icon>
@@ -181,8 +181,8 @@
                        </div>
                        <div class="pt-2 pl-4" *ngIf="User_Management">
                         <ul class="flex flex-col pl-2 text-gray-500 border-l border-gray-700">
-                            <li><a routerLink="/user-management/admins-list" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Admins List</a></li>
-                            <li><a routerLink="/user-management/admins-management" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Admins Management</a></li>
+                            <li><a (click)="selectItem('Admins-List')" routerLinkActive="active" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Admins List</a></li>
+                            <li><a (click)="selectItem('Admins-Management')" routerLinkActive="active" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Admins Management</a></li>
     
                         </ul>
     
@@ -201,7 +201,7 @@
                             <div class="absolute inset-y-0 left-0 flex items-center pl-1">
                                 <mat-icon class=" w-7 h-7 stroke-current text-gray-500" view-Box="002424">report</mat-icon>
                                </div>
-                                <a routerLink="/reporting" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" class="inline-block w-full pr-4 pl-8 py-3 text-xs hover:bg-gray-800 rounded">Reporting</a>
+                                <a (click)="selectItem('Reporting')" routerLinkActive="active" class="inline-block w-full pr-4 pl-8 py-3 text-xs hover:bg-gray-800 rounded">Reporting</a>
                         </div>
                         <button class="absolute right-0 p-1 flex items-center" (click)="toggleExpanded(7)">
                             <mat-icon class="w-7 h-7 stroke-current text-gray-500" view-Box="002424" >expand_more</mat-icon>
@@ -209,8 +209,8 @@
                        </div>
                        <div class="pt-2 pl-4" *ngIf="Reporting">
                         <ul class="flex flex-col pl-2 text-gray-500 border-l border-gray-700">
-                            <li><a routerLink="/reporting/admin-reports" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Client Reports</a></li>
-                            <li><a routerLink="/reporting/client-reports" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Admin Reports</a></li>
+                            <li><a (click)="selectItem('Client-Reports')" routerLinkActive="active" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Client Reports</a></li>
+                            <li><a (click)="selectItem('Admin-Reports')" routerLinkActive="active" class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white ">Admin Reports</a></li>
                         </ul>
     
                       </div>
@@ -231,7 +231,7 @@
                             <div class="absolute inset-y-0 left-0 flex items-center pl-1">
                                 <mat-icon class=" w-7 h-7 stroke-current text-gray-500" view-Box="002424">settings</mat-icon>
                                </div>
-                                <a routerLink="/settings" routerLinkActive="active" class="inline-block w-full pr-4 pl-8 py-3 text-xs hover:bg-gray-800 rounded">Settings</a>
+                                <a (click)="selectItem('settings')" routerLinkActive="active" class="inline-block w-full pr-4 pl-8 py-3 text-xs hover:bg-gray-800 rounded">Settings</a>
                         </div>
             
                        </div>
@@ -249,7 +249,7 @@
                             <div class="absolute inset-y-0 left-0 flex items-center pl-1">
                                 <mat-icon class=" w-7 h-7 stroke-current text-gray-500" view-Box="002424">notifications</mat-icon>
                                </div>
-                                <a routerLink="/notifications" routerLinkActive="active" class="inline-block w-full pr-4 pl-8 py-3 text-xs hover:bg-gray-800 rounded">Notifications</a>
+                                <a (click)="selectItem('notifications')" routerLinkActive="active" class="inline-block w-full pr-4 pl-8 py-3 text-xs hover:bg-gray-800 rounded">Notifications</a>
                         </div>
                         
                        </div>

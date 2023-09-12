@@ -46,6 +46,7 @@ export class SideNavbarComponent {
  
   }
  }
+ 
  account(){
   this.route.navigate(['/settings']);
 
