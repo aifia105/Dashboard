@@ -1,14 +1,19 @@
-<app-navbar></app-navbar>
+<!--
+    <nav>
+    <app-navbar></app-navbar>
+</nav>
 
-<hr class="border-gray-700">
+-->
 
-<div class="flex items-start justify-normal">
+<div class="bg-gray-900 flex items-start justify-normal ">
     <div class="flex flex-row">
         <app-side-navbar (itemSelected)="selectedItem = $event"></app-side-navbar>
         
     </div>
-    
-    <div class="flex items-start justify-normal w-full">
+    <div *ngIf="selectedItem === '' ">
+        <app-overview></app-overview>
+    </div>
+    <div class=" w-full h-screen">
         <div>
             <ng-container *ngIf="selectedItem === 'Dashboard'">
                 <app-overview></app-overview>
@@ -22,7 +27,6 @@
             <ng-container *ngIf="selectedItem === 'Visitor-Traffic'">
                 <app-visitor-traffic></app-visitor-traffic>
             </ng-container>
-
 
             <ng-container *ngIf="selectedItem === 'Product'">
                 <app-product></app-product>
