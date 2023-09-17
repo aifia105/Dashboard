@@ -11,9 +11,5 @@ export class NavbarComponent {
 
   }
 
-  logout(){
-    this.route.navigate(['authentication']);
- 
-  }
 
 }

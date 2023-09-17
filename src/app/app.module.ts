@@ -41,6 +41,7 @@ import { AdminsManagementComponent } from './components/user-management/admins-m
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { HomeComponent } from './components/home/home.component';
 import { authGuardGuard } from './guard/auth-guard.guard';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 
 
@@ -90,7 +91,8 @@ import { authGuardGuard } from './guard/auth-guard.guard';
     FormsModule,
     MatIconModule,
     RouterModule,
-    MatIconModule
+    MatIconModule,
+    NgxChartsModule,
     ],
   providers: [],
   bootstrap: [AppComponent]
