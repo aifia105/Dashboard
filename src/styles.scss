@@ -42,15 +42,71 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     bottom: 0;
   }
 
-  .card {
-    border: 1px solid;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(21, 20, 20, 0.1);
-    padding: 16px;
-    --tw-bg-opacity: 1;
-    background-color: rgb(17 24 39 / var(--tw-bg-opacity));
-    width: 400px; 
-    height: 300px;
+  
+.card1 {
+  border: 1px solid;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(21, 20, 20, 0.1);
+  padding: 16px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+  width: 800px; 
+  height: 500px;
+
+}
+.card2 {
+  border: 1px solid;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(21, 20, 20, 0.1);
+  padding: 16px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+  width: 500px; 
+  height: 500px;
+
+}
+.card3 {
+  border: 1px solid;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(21, 20, 20, 0.1);
+  padding: 16px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+  width: 700px; 
+  height: 300px;
+
+}
+.card4 {
+  border: 1px solid;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(21, 20, 20, 0.1);
+  padding: 16px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+  width: 600px; 
+  height: 300px;
+
+}
+.card {
+  border: 1px solid;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(21, 20, 20, 0.1);
+  padding: 16px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+  width: 650px; 
+  height: 300px;
+
+}
+.cardL {
+  border: 1px solid;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(21, 20, 20, 0.1);
+  padding: 16px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+  width: 650px; 
+  height: 200px;
 
 }
 

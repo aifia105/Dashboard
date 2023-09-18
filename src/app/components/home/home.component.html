@@ -3,16 +3,16 @@
         <app-side-navbar (itemSelected)="selectedItem = $event"></app-side-navbar>
         
     </div>
-    <div *ngIf="selectedItem === '' ">
-        <app-overview></app-overview>
-    </div>
     <div class=" w-full h-screen">
         <div>
+            <ng-container *ngIf="selectedItem === '' ">
+                <div>
+                    Home
+                </div>
+     
+            </ng-container>
             <ng-container *ngIf="selectedItem === 'Dashboard'">
                 <app-overview></app-overview>
-            </ng-container>
-            <ng-container *ngIf="selectedItem === 'Sales-Data'">
-                <app-data-sales></app-data-sales>
             </ng-container>
             <ng-container *ngIf="selectedItem === 'Inventorry-Status'">
                 <app-inventorry-satuts></app-inventorry-satuts>
@@ -24,9 +24,7 @@
             <ng-container *ngIf="selectedItem === 'Product'">
                 <app-product></app-product>
             </ng-container>
-            <ng-container *ngIf="selectedItem === 'Product-Catalog'">
-                <app-product-catalog></app-product-catalog>
-            </ng-container>
+            
             <ng-container *ngIf="selectedItem === 'Inventory-Management'">
                 <app-inventorry-management></app-inventorry-management>
             </ng-container>

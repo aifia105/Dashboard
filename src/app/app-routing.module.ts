@@ -9,12 +9,10 @@ import { OrderListComponent } from './components/orders/order-list/order-list.co
 import { OrderProcessingComponent } from './components/orders/order-processing/order-processing.component';
 import { OrderTrackingComponent } from './components/orders/order-tracking/order-tracking.component';
 import { OverviewComponent } from './components/overview/overview.component';
-import { DataSalesComponent } from './components/overview/data-sales/data-sales.component';
 import { InventorrySatutsComponent } from './components/overview/inventorry-satuts/inventorry-satuts.component';
 import { VisitorTrafficComponent } from './components/overview/visitor-traffic/visitor-traffic.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { ProductComponent } from './components/product/product.component';
-import { ProductCatalogComponent } from './components/product/product-catalog/product-catalog.component';
 import { InventorryManagementComponent } from './components/product/inventorry-management/inventorry-management.component';
 import { ProductPerformanceComponent } from './components/product/product-performance/product-performance.component';
 import { ReportingComponent } from './components/reporting/reporting.component';
@@ -50,13 +48,11 @@ const routes: Routes = [
   ]},
 
   {path: "overview", data: {breadcrumb:"Orders"} , component: OverviewComponent , canActivate: [authGuardGuard] , children: [
-    {path: "data-sales", data: {breadcrumb:"DataSales"} , canActivate: [authGuardGuard] , component: DataSalesComponent},
     {path: "inventorry-satuts", data: {breadcrumb:"InventorrySatuts"} , canActivate: [authGuardGuard] , component: InventorrySatutsComponent},
     {path: "visitor-traffic", data: {breadcrumb:"VisitorTraffic"} , canActivate: [authGuardGuard] , component: VisitorTrafficComponent}
   ]},
 
   {path: "product", data: {breadcrumb:"Product"} , component: ProductComponent , canActivate: [authGuardGuard] , children: [
-    {path: "product-catalog", data: {breadcrumb:"ProductCatalog"} , canActivate: [authGuardGuard] , component: ProductCatalogComponent},
     {path: "inventorry-management", data: {breadcrumb:"InventorryManagement"} , canActivate: [authGuardGuard] , component: InventorryManagementComponent},
     {path: "product-performance", data: {breadcrumb:"ProductPerformance"} , canActivate: [authGuardGuard] , component: ProductPerformanceComponent}
   ]},
