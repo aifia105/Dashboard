@@ -1,28 +1,97 @@
-<div class="flex flex-wrap justify-start py-4 px-4 gap-10 rounded-md">
-    <div class="card1 ">
-        <h2 class="text-white">Total revenue</h2>
-        <p  class="text-white">Total revenue chart</p>
-    </div>
-    <div class="card2 ">
-        <h2 class="text-white">Top-selling products</h2>
+<div class="h-screen grid grid-cols-3 gap-3 p-4">
+    <div class=" bg-gray-900  shadow-md shadow-gray-800 text-white w-full h-[700px] flex flex-col justify-center items-center pr-12">
         <div>
-    
+            zeby
         </div>
-        <p  class="text-white">Top-selling products</p>
-    </div>
-    <div class="card3 ">
-        <h2 class="text-white">Number of orders</h2>
-        <div>
-    
+        <div class="w-max">
+            zeby
         </div>
-        <p  class="text-white"> number of orders chart</p>
-    </div>
-    <div class="card4 ">
-        <h2 class="text-white">Average order value</h2>
-        <div>
-    
-        </div>
-        <p  class="text-white">average order value</p>
-    </div>
-</div>
 
+        <div class="">
+            <ngx-charts-line-chart
+            [view]="[500, 200]" 
+            [results]="data2"
+            [xAxis]="true"
+            [yAxis]="true"
+            [showXAxisLabel]="true"
+            [showYAxisLabel]="true"
+            xAxisLabel="Months"
+            >
+        </ngx-charts-line-chart>
+        </div>
+    </div>
+    <div class=" bg-gray-900  shadow-md shadow-gray-800 text-white w-full h-[700px] flex flex-col justify-center items-center pr-12">
+        <div class="">
+            <ngx-charts-line-chart
+            [view]="[500, 200]" 
+            [results]="data2"
+            [xAxis]="true"
+            [yAxis]="true"
+            [showXAxisLabel]="true"
+            [showYAxisLabel]="true"
+            xAxisLabel="Months"
+            >
+        </ngx-charts-line-chart>
+        </div>
+    </div>
+    <div class=" bg-gray-900  shadow-md shadow-gray-800 text-white w-full h-[700px] flex flex-col justify-center items-center">
+        
+        
+        
+        
+        <div >
+            <h1>avregre revenu</h1>
+        </div>
+        <div class="px-6 pt-8">
+            <hr class="border-violet-900"/>
+        </div>
+
+       <div class="w-full">
+        <ngx-charts-bar-horizontal
+        [view]="[400, 200]"
+        [results]="data"
+        [xAxis]="true"
+        [yAxis]="true"
+        [showXAxisLabel]="true"
+        [showYAxisLabel]="true"
+        xAxisLabel="Values"
+        yAxisLabel="Categories"
+      >
+      </ngx-charts-bar-horizontal>
+       </div>
+    </div>
+    <div class=" bg-gray-900  shadow-md shadow-gray-800 text-white w-full h-[160px]">
+        <div>
+            <ngx-charts-pie-chart
+            [view]="[450, 140]"
+            [results]="dat">
+        </ngx-charts-pie-chart>
+            
+
+        </div>
+    </div>
+    <div class=" bg-gray-900  shadow-md shadow-gray-800 text-white w-full h-[160px]">
+        <div>
+            <ngx-charts-pie-chart
+            [view]="[450, 140]"
+            [results]="dat">
+        </ngx-charts-pie-chart>
+            
+
+        </div>
+    </div>
+    <div class=" bg-gray-900  shadow-md shadow-gray-800 text-white w-full h-[160px]">
+        <div>
+            <ngx-charts-pie-chart
+            [view]="[450, 140]"
+            [results]="dat">
+        </ngx-charts-pie-chart>
+            
+
+        </div>
+    </div>
+
+</div>
+    
+    
+       
