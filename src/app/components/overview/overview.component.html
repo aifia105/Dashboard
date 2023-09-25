@@ -1,94 +1,144 @@
-<div class="h-screen grid grid-cols-3 gap-3 p-4">
-    <div class=" bg-gray-900  shadow-md shadow-gray-800 text-white w-full h-[700px] flex flex-col justify-center items-center pr-12">
-        <div>
-            zeby
+<div class="h-screen grid grid-cols-3 gap-3 p-4 ">
+    <div class=" bg-gray-900  shadow-md shadow-gray-800  w-full h-[700px]  ">
+        <div class=" mr-auto pb-16  ">
+            <p class="text-sm py-2 sm:text-2xl font-bold text-gray-500">Total revenue:</p>
+            <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="green" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+              </svg>
+            </div>
         </div>
-        <div class="w-max">
-            zeby
-        </div>
-
-        <div class="">
-            <ngx-charts-line-chart
-            [view]="[500, 200]" 
-            [results]="data2"
-            [xAxis]="true"
-            [yAxis]="true"
-            [showXAxisLabel]="true"
-            [showYAxisLabel]="true"
-            xAxisLabel="Months"
-            >
-        </ngx-charts-line-chart>
-        </div>
-    </div>
-    <div class=" bg-gray-900  shadow-md shadow-gray-800 text-white w-full h-[700px] flex flex-col justify-center items-center pr-12">
-        <div class="">
-            <ngx-charts-line-chart
-            [view]="[500, 200]" 
-            [results]="data2"
-            [xAxis]="true"
-            [yAxis]="true"
-            [showXAxisLabel]="true"
-            [showYAxisLabel]="true"
-            xAxisLabel="Months"
-            >
-        </ngx-charts-line-chart>
-        </div>
-    </div>
-    <div class=" bg-gray-900  shadow-md shadow-gray-800 text-white w-full h-[700px] flex flex-col justify-center items-center">
-        
-        
-        
-        
-        <div >
-            <h1>avregre revenu</h1>
+        <div class="flex  justify-center items-centermx-auto  pb-40 ">
+            <p class="text-2xl py-2 sm:text-6xl font-bold text-[#ccd6f6]">{{total_revenue  | currency}}</p>
         </div>
         <div class="px-6 pt-8">
             <hr class="border-violet-900"/>
         </div>
 
-       <div class="w-full">
+        <div class="mr-auto pl-2 ">
+            <p class="text-sm  py-2 sm:text-lg font-bold text-gray-500">Monthly total revenue:</p>
+        </div>
+            <div class="flex  justify-center items-center pr-10 dark">
+                <ngx-charts-line-chart 
+                [view]="[500, 200]" 
+                [results]="data2"
+                [xAxis]="true"
+                [yAxis]="true"
+                [showXAxisLabel]="true"
+                [showYAxisLabel]="true"
+                xAxisLabel="Months"
+                >
+                <div class="text-white" xAxisLabel="Months"></div>
+                <div class="text-white" yAxisLabel=""></div>
+            </ngx-charts-line-chart>
+            </div>
+           </div>
+
+
+
+           
+    <div class=" bg-gray-900  shadow-md shadow-gray-800 text-white w-full h-[700px] ">
+        <div class=" mr-auto pb-16  ">
+            <p class="text-sm p-2 sm:text-2xl font-bold text-gray-500">Orders:</p>
+            <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="green" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+              </svg>
+            </div>
+        </div>
+        <div class="flex  justify-center items-centermx-auto  pb-40 ">
+            <p class="text-2xl py-2 sm:text-6xl font-bold text-[#ccd6f6]">{{orders_number  | number}}</p>
+        </div>
+        <div class="px-6 pt-8">
+            <hr class="border-violet-900"/>
+        </div>
+
+        <div class="mr-auto pl-2 ">
+            <p class="text-sm  py-2 sm:text-lg font-bold text-gray-500">Monthly orders volume:</p>
+        </div>
+            <div class="flex  justify-center items-center pr-10 dark">
+                <ngx-charts-line-chart 
+                [view]="[500, 200]" 
+                [results]="data2"
+                [xAxis]="true"
+                [yAxis]="true"
+                [showXAxisLabel]="true"
+                [showYAxisLabel]="true"
+                xAxisLabel="Months"
+                >
+                <div class="text-white" xAxisLabel="Months"></div>
+                <div class="text-white" yAxisLabel=""></div>
+            </ngx-charts-line-chart>
+            </div>
+    </div>
+    <div class=" bg-gray-900  shadow-md shadow-gray-800 text-white w-full h-[700px] ">
+        
+        <div class=" mr-auto pb-16  ">
+            <p class="text-sm pt-2 sm:text-2xl font-bold text-gray-500">Top-selling products:</p>
+        </div>
+       <div class="dark">
         <ngx-charts-bar-horizontal
-        [view]="[400, 200]"
+        [view]="[450, 200]"
         [results]="data"
         [xAxis]="true"
         [yAxis]="true"
         [showXAxisLabel]="true"
         [showYAxisLabel]="true"
         xAxisLabel="Values"
-        yAxisLabel="Categories"
+        yAxisLabel="Products"
+      >
+      </ngx-charts-bar-horizontal>
+       </div>
+       <div class="px-6 pt-8">
+        <hr class="border-violet-900"/>
+    </div>
+    <div class="pl-2">
+        <p class="text-sm pt-2 sm:text-lg font-bold text-gray-500">Orders by category:</p>
+    </div>
+    <div class="pt-20 dark">
+        <ngx-charts-bar-horizontal
+        [view]="[450, 200]"
+        [results]="data"
+        [xAxis]="true"
+        [yAxis]="true"
+        [showXAxisLabel]="true"
+        [showYAxisLabel]="true"
+        xAxisLabel="Values"
+        yAxisLabel="Products"
       >
       </ngx-charts-bar-horizontal>
        </div>
     </div>
     <div class=" bg-gray-900  shadow-md shadow-gray-800 text-white w-full h-[160px]">
-        <div>
+        <div class="pl-2">
+            <p class="text-sm py-2 sm:text-lg font-bold text-gray-500">shipping fees:</p>
+        </div>
+            <div class="flex  justify-center items-center mx-auto ">
+                <p class="text-2xl py-2 sm:text-5xl font-bold text-[#ccd6f6]">{{shipping_fees | currency }}</p>
+            </div>
+    </div>
+    <div class=" bg-gray-900  shadow-md shadow-gray-800 text-white w-full h-[160px]">
+        <div class="pl-2">
+            <p class="text-sm pt-2 sm:text-lg font-bold text-gray-500">Avrege order value:</p>
+        </div>
+        <div class="flex justify-start items-start">
             <ngx-charts-pie-chart
-            [view]="[450, 140]"
-            [results]="dat">
+            [view]="[200, 130]"
+            [results]="dat"
+            >
         </ngx-charts-pie-chart>
             
 
         </div>
     </div>
     <div class=" bg-gray-900  shadow-md shadow-gray-800 text-white w-full h-[160px]">
-        <div>
-            <ngx-charts-pie-chart
-            [view]="[450, 140]"
-            [results]="dat">
-        </ngx-charts-pie-chart>
-            
 
+        <div class="pl-2">
+            <p class="text-sm py-2 sm:text-lg font-bold text-gray-500">Users number:</p>
         </div>
-    </div>
-    <div class=" bg-gray-900  shadow-md shadow-gray-800 text-white w-full h-[160px]">
-        <div>
-            <ngx-charts-pie-chart
-            [view]="[450, 140]"
-            [results]="dat">
-        </ngx-charts-pie-chart>
-            
-
-        </div>
+            <div class="flex  justify-center items-center mx-auto ">
+                <p class="text-2xl py-2 sm:text-5xl font-bold text-[#ccd6f6]">{{users_number | number }}</p>
+            </div>
     </div>
 
 </div>

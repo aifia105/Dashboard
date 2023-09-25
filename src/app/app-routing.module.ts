@@ -49,7 +49,6 @@ const routes: Routes = [
 
   {path: "overview", data: {breadcrumb:"Orders"} , component: OverviewComponent , canActivate: [authGuardGuard] , children: [
     {path: "inventorry-satuts", data: {breadcrumb:"InventorrySatuts"} , canActivate: [authGuardGuard] , component: InventorrySatutsComponent},
-    {path: "visitor-traffic", data: {breadcrumb:"VisitorTraffic"} , canActivate: [authGuardGuard] , component: VisitorTrafficComponent}
   ]},
 
   {path: "product", data: {breadcrumb:"Product"} , component: ProductComponent , canActivate: [authGuardGuard] , children: [

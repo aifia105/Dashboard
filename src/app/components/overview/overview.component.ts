@@ -6,19 +6,28 @@ import { Component } from '@angular/core';
   styleUrls: ['./overview.component.scss']
 })
 export class OverviewComponent {
+  total_revenue : number = 1600 ;
+  shipping_fees : number = 2000;
+  orders_number : number = 30;
+  users_number : number = 100;
   data = [
     {
-      name: 'Category 1',
+      name: 'Product 1',
       value: 10,
     },
     {
-      name: 'Category 2',
+      name: 'Product 2',
       value: 20,
     },
     {
-      name: 'Category 3',
+      name: 'Product 3',
       value: 15,
     },
+    {
+      name: 'Product 4',
+      value: 15,
+    },
+    
     // Add more data points as needed
   ];
   data2 = [
@@ -78,18 +87,39 @@ export class OverviewComponent {
     // Add more series as needed
   ];
   dat = [
+    
     {
-      name: 'Category 1',
-      value: 30,
-    },
-    {
-      name: 'Category 2',
+      name: 'Product 2',
       value: 45,
     },
+    
     {
-      name: 'Category 3',
+      name: 'Product 4',
       value: 25,
     },
+    
+    // Add more data points as needed
+  ];
+  dat1 = [
+    
+    {
+      name: 'Product 2',
+      value: 15,
+    },
+    
+    {
+      name: 'Product 1',
+      value: 25,
+    },
+    {
+      name: 'Product 3',
+      value: 25,
+    },
+    {
+      name: 'Product 4',
+      value: 35,
+    },
+    
     // Add more data points as needed
   ];
 }

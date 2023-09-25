@@ -1,4 +1,4 @@
-<div class="bg-gray-950 flex items-start justify-normal ">
+<div class="w-full h-screen bg-gray-950 flex items-start justify-normal scroll-smooth ">
     <div class="flex flex-row">
         <app-side-navbar (itemSelected)="selectedItem = $event"></app-side-navbar>
         
@@ -16,9 +16,6 @@
             </ng-container>
             <ng-container *ngIf="selectedItem === 'Inventorry-Status'">
                 <app-inventorry-satuts></app-inventorry-satuts>
-            </ng-container>
-            <ng-container *ngIf="selectedItem === 'Visitor-Traffic'">
-                <app-visitor-traffic></app-visitor-traffic>
             </ng-container>
 
             <ng-container *ngIf="selectedItem === 'Product'">

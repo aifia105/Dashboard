@@ -13,7 +13,6 @@ import { SideNavbarComponent } from './components/side-navbar/side-navbar.compon
 import { RouterModule } from '@angular/router';
 import { OverviewComponent } from './components/overview/overview.component';
 import { InventorrySatutsComponent } from './components/overview/inventorry-satuts/inventorry-satuts.component';
-import { VisitorTrafficComponent } from './components/overview/visitor-traffic/visitor-traffic.component';
 import { ProductComponent } from './components/product/product.component';
 import { OrdersComponent } from './components/orders/orders.component';
 import { CustomerInsightsComponent } from './components/customer-insights/customer-insights.component';
@@ -42,6 +41,7 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,7 +49,6 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
     SideNavbarComponent,
     OverviewComponent,
     InventorrySatutsComponent,
-    VisitorTrafficComponent,
     ProductComponent,
     OrdersComponent,
     CustomerInsightsComponent,
@@ -72,7 +71,7 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
     AdminReportsComponent,
     AdminsManagementComponent,
     NotfoundComponent,
-    HomeComponent
+    HomeComponent,
 
 
   ],

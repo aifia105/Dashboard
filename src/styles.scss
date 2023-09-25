@@ -44,4 +44,44 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
   
 
+  .dark {
+    $color-text-dark: #72809b;
+    $color-text-med-dark: #919db5;
+    $color-text-med: #A0AABE;
+    $color-text-med-light: #d9dce1;
+    $color-text-light: #f0f1f6;
+    $color-text-lighter: #fff;
+    .ngx-charts {
+  
+      text {
+        fill: $color-text-med;
+      }
+    }
+  
+    .chart-legend {
+     
+  
+      .legend-item {
+        &:hover {
+          color: #fff;
+        }
+      }
+  
+      .legend-label {
+        &:hover {
+          color: #fff !important;
+        }
+  
+        .active {
+          .legend-label-text {
+            color: #fff !important;
+          }
+        }
+      }
+
+      .scale-legend-label {
+        color: $color-text-med;
+      }
+    }
+  }
 
