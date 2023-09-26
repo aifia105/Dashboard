@@ -46,8 +46,8 @@
               </svg>
             </div>
         </div>
-        <div class="flex  justify-center items-centermx-auto  pb-40 ">
-            <p class="text-2xl py-2 sm:text-6xl font-bold text-[#ccd6f6]">{{orders_number  | number}}</p>
+        <div class="flex  justify-center items-centermx-auto  pb-40  ">
+            <p class="text-2xl py-2 sm:text-6xl font-bold text-[#ccd6f6] ">{{orders_number  | number}}</p>
         </div>
         <div class="px-6 pt-8">
             <hr class="border-violet-900"/>
@@ -89,13 +89,13 @@
       >
       </ngx-charts-bar-horizontal>
        </div>
-       <div class="px-6 pt-8">
+       <div class="px-6 pt-20">
         <hr class="border-violet-900"/>
     </div>
     <div class="pl-2">
         <p class="text-sm pt-2 sm:text-lg font-bold text-gray-500">Orders by category:</p>
     </div>
-    <div class="pt-20 dark">
+    <div class="pt-14 dark">
         <ngx-charts-bar-horizontal
         [view]="[450, 200]"
         [results]="data"
@@ -121,7 +121,7 @@
         <div class="pl-2">
             <p class="text-sm pt-2 sm:text-lg font-bold text-gray-500">Avrege order value:</p>
         </div>
-        <div class="flex justify-start items-start">
+        <div class="flex justify-start items-start ">
             <ngx-charts-pie-chart
             [view]="[200, 130]"
             [results]="dat"

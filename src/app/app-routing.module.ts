@@ -10,7 +10,6 @@ import { OrderProcessingComponent } from './components/orders/order-processing/o
 import { OrderTrackingComponent } from './components/orders/order-tracking/order-tracking.component';
 import { OverviewComponent } from './components/overview/overview.component';
 import { InventorrySatutsComponent } from './components/overview/inventorry-satuts/inventorry-satuts.component';
-import { VisitorTrafficComponent } from './components/overview/visitor-traffic/visitor-traffic.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { ProductComponent } from './components/product/product.component';
 import { InventorryManagementComponent } from './components/product/inventorry-management/inventorry-management.component';
