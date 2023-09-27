@@ -8,5 +8,7 @@ export interface product {
     tva : Number;
     priceTTC : Number;
     pricture : string;
-    category : category;
+    category : string;
+    avg_rating : number;
+    CreationDate : string;
 }

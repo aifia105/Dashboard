@@ -1,0 +1,93 @@
+<div class="h-screen grid  p-3 ">
+    <div class="bg-gray-900 shadow-md shadow-gray-800 w-full">
+        <div class="flex items-center justify-between py-7 px-10">
+            <div>
+                <h1 class="text-sm  sm:text-2xl font-bold text-gray-500 ">Products</h1>
+                <p class="text-sm font-medium text-gray-500 ">Products management:</p>
+            </div>
+            <button class="inline-flex gap-x-2 items-center py-2.5 px-6 text-white bg-violet-900 rounded-xl hover:bg-violet-950 focus:outline-none focus:ring-2 focus:ring-violet-700 focus:ring-offset-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-plus text-white" viewBox="0 0 16 16">
+                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                  </svg>
+
+                <span class="text-sm font-semibold tracking-wide" >Create Item</span>
+            </button>
+            
+        </div>
+
+        <table class="w-full border-b border-violet-900 ">
+            <thead>
+                <tr class="text-sm font-medium text-gray-500 border-y border-violet-900">
+                    <td class="pl-40">Product</td>
+                    <td class="py-4 px-4 text-center">priceTTC</td>
+                    <td class="py-4 px-4 text-center">Rating</td>
+                    <td class="py-4 px-4 text-center">Category</td>
+                    <td class="py-4 px-4 text-center">Creation Date</td>
+                    <td class="py-4 pr-10 pl-4 text-center ">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-funnel" viewBox="0 0 16 16">
+                            <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2zm1 .5v1.308l4.372 4.858A.5.5 0 0 1 7 8.5v5.306l2-.666V8.5a.5.5 0 0 1 .128-.334L13.5 3.308V2h-11z"/>
+                          </svg>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let product in products" class="hover:bg-gray-100 transition-colors group">
+                    <td class="flex gap-x-4 items-center py-4 pl-10">
+                        <img :src="product.pricture" alt="product_img" class="w-40 aspect[3/2] rounded-lg object-cover object-top border border-gray-200">
+                        <span class="text-lg font-semibold text-gray-500"> {{product.name}} </span>
+                    </td>
+                    <td class="font-medium text-center text-gray-500">{{product.priceTTC | currency}}</td>
+                    <td class="text-center text-gray-500">
+                        <span class="font-medium">{{product.avg_rating}}</span>
+                        <span class="text-gray-400"></span>
+                    </td>
+                    <td class="font-medium text-center text-gray-500">{{product.category}}</td>
+                    <td>
+                        <span class="inline-block w-20 group-hover:hidden" >{{product.CreationDate | date}} </span>
+                        <div class="hidden group-hover:flex group-hover:items-center group-hover:w-20 group-hover:text-gray-500 group-hover:gap-x-2">
+                            <button class="p-2 hover:rounded-md hover:bg-gray-200 ">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
+                                    <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001zm-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708l-1.585-1.585z"/>
+                                  </svg>
+                            </button>
+
+                            <button class="p-2 hover:rounded-md hover:bg-gray-200 ">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                    <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z"/>
+                                    <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1ZM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118ZM2.5 3h11V2h-11v1Z"/>
+                                  </svg>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="flex gap-x-2 justify-center pt-8">
+            <button class="flex justify-center items-center w-8 h-8 ">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-circle text-white" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+                  </svg>
+            </button>
+
+    
+            <button *ngFor="let i in 6 " class="flex items-center w-8 h-8 font-medium rounded-full text-white"
+            :class="i === 1 ? 'bg-gray-900 text-white' : 'text-gray-500 hover:text-violet-900'"
+             > {{i}} </button>
+
+            <button class="flex justify-center items-center w-8 h-8 ">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle text-white" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+                  </svg>
+            </button>
+
+
+        </div>
+
+
+
+
+
+
+    </div>
+
+</div>
