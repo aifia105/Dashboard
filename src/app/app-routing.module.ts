@@ -5,7 +5,6 @@ import { CustomerInsightsComponent } from './components/customer-insights/custom
 import { CustomerProfilesComponent } from './components/customer-insights/customer-profiles/customer-profiles.component';
 import { SegmentationComponent } from './components/customer-insights/segmentation/segmentation.component';
 import { OrdersComponent } from './components/orders/orders.component';
-import { OrderListComponent } from './components/orders/order-list/order-list.component';
 import { OrderProcessingComponent } from './components/orders/order-processing/order-processing.component';
 import { OrderTrackingComponent } from './components/orders/order-tracking/order-tracking.component';
 import { OverviewComponent } from './components/overview/overview.component';
@@ -23,7 +22,6 @@ import { SuppliesManagementComponent } from './components/suppliers/supplies-man
 import { UserManagementComponent } from './components/user-management/user-management.component';
 import { AdminsListComponent } from './components/user-management/admins-list/admins-list.component';
 import { AdminsManagementComponent } from './components/user-management/admins-management/admins-management.component';
-import { NotificationsComponent } from './components/notifications/notifications.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { HomeComponent } from './components/home/home.component';
 import { authGuardGuard } from './guard/auth-guard.guard';
@@ -41,7 +39,6 @@ const routes: Routes = [
   ]},
 
   {path: "orders", data: {breadcrumb:"Orders"} , component: OrdersComponent , canActivate: [authGuardGuard] , children: [
-    {path: "orders-list", data: {breadcrumb:"OrderList"} , canActivate: [authGuardGuard] , component: OrderListComponent},
     {path: "orders-processing", data: {breadcrumb:"OrderProcessing"} , canActivate: [authGuardGuard] , component: OrderProcessingComponent},
     {path: "orders-tracking", data: {breadcrumb:"OrderTracking"} , canActivate: [authGuardGuard] , component: OrderTrackingComponent}
   ]},
@@ -51,7 +48,6 @@ const routes: Routes = [
   ]},
 
   {path: "product", data: {breadcrumb:"Product"} , component: ProductComponent , canActivate: [authGuardGuard] , children: [
-    {path: "inventorry-management", data: {breadcrumb:"InventorryManagement"} , canActivate: [authGuardGuard] , component: InventorryManagementComponent},
     {path: "product-performance", data: {breadcrumb:"ProductPerformance"} , canActivate: [authGuardGuard] , component: ProductPerformanceComponent}
   ]},
 
@@ -70,11 +66,11 @@ const routes: Routes = [
     {path: "admins-management", data: {breadcrumb:"SuppliesManagement"} , canActivate: [authGuardGuard] , component: AdminsManagementComponent}
   ]},
 
-  {path: "notifications", data: {breadcrumb:"Notifications"} , canActivate: [authGuardGuard] , component: NotificationsComponent },
-
   {path: "settings", data: {breadcrumb:"Settings"} , canActivate: [authGuardGuard] , component: SettingsComponent },
 
   {path: "authentication", data: {breadcrumb:"Authentification"} , component: AuthentificationComponent },
+  
+  {path: "inventorry-management", data: {breadcrumb:"InventorryManagement"} , canActivate: [authGuardGuard] , component: InventorryManagementComponent},
 
   {path: '**', data: {breadcrumb:"Notfound"} , component:NotfoundComponent}
 ];

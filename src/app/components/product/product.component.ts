@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { product } from 'src/app/shared/models/product';
 
 @Component({
@@ -7,40 +8,10 @@ import { product } from 'src/app/shared/models/product';
   styleUrls: ['./product.component.scss']
 })
 export class ProductComponent {
+  constructor(private route : Router){}
 
-  products : product[] = [
-    { name : "product1",
-      description : "description1",
-      priceHt : 1,
-      tva : 1,
-      priceTTC : 1,
-      pricture : "string1",
-      category : "category1",
-      avg_rating : 1,
-      CreationDate : "12/4/2020"},
-
-      { name : "product2",
-      description : "description2",
-      priceHt : 2,
-      tva : 2,
-      priceTTC : 2,
-      pricture : "string2",
-      category : "category2",
-      avg_rating : 2,
-      CreationDate:"12/4/2020"},
-
-      { name : "product3",
-      description : "description3",
-      priceHt : 3,
-      tva : 3,
-      priceTTC : 3,
-      pricture : "string3",
-      category : "category3",
-      avg_rating : 3,
-      CreationDate: "12/4/2020"},
-
-
-      { name : "product4",
+  product = {
+    name : "product4",
       description : "description4",
       priceHt : 4,
       tva : 4,
@@ -48,7 +19,12 @@ export class ProductComponent {
       pricture : "string4",
       category : "category4",
       avg_rating : 4,
-      CreationDate :"12/4/2020"},
-  ]
+      CreationDate :"12/4/2020"
+  }
+
+  createItemForm(){
+    this.route.navigate(['product/inventorry-management']);
+
+  }
 
 }

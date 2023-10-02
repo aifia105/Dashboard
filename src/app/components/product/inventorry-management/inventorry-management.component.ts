@@ -7,4 +7,19 @@ import { Component } from '@angular/core';
 })
 export class InventorryManagementComponent {
 
+  item = {
+    image: null
+  }
+
+  categorys = {
+    name :"phone"
+   
+  }
+
+
+
+  onFileSelected(event: any) {
+    this.item.image = event.target.files[0];
+  }
 }
+

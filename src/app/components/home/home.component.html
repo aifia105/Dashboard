@@ -22,9 +22,6 @@
                 <app-product></app-product>
             </ng-container>
             
-            <ng-container *ngIf="selectedItem === 'Inventory-Management'">
-                <app-inventorry-management></app-inventorry-management>
-            </ng-container>
             <ng-container *ngIf="selectedItem === 'Product-Performance'">
                 <app-product-performance></app-product-performance>
             </ng-container>
@@ -32,9 +29,6 @@
 
             <ng-container *ngIf="selectedItem === 'Orders'">
                 <app-orders></app-orders>
-            </ng-container>
-            <ng-container *ngIf="selectedItem === 'Order-List'">
-                <app-order-list></app-order-list>
             </ng-container>
             <ng-container *ngIf="selectedItem === 'Order-Tracking'">
                 <app-order-tracking></app-order-tracking>
@@ -89,11 +83,6 @@
 
             <ng-container *ngIf="selectedItem === 'settings'">
                 <app-settings></app-settings>
-            </ng-container>
-
-
-            <ng-container *ngIf="selectedItem === 'notifications'">
-                <app-notifications></app-notifications>
             </ng-container>
 
               
