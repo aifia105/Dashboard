@@ -22,9 +22,7 @@ import { ReportingComponent } from './components/reporting/reporting.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { InventorryManagementComponent } from './components/product/inventorry-management/inventorry-management.component';
 import { ProductPerformanceComponent } from './components/product/product-performance/product-performance.component';
-import { OrderTrackingComponent } from './components/orders/order-tracking/order-tracking.component';
 import { OrderProcessingComponent } from './components/orders/order-processing/order-processing.component';
-import { CustomerProfilesComponent } from './components/customer-insights/customer-profiles/customer-profiles.component';
 import { SegmentationComponent } from './components/customer-insights/segmentation/segmentation.component';
 import { SuppliesListComponent } from './components/suppliers/supplies-list/supplies-list.component';
 import { SuppliesManagementComponent } from './components/suppliers/supplies-management/supplies-management.component';
@@ -56,9 +54,7 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
     SettingsComponent,
     InventorryManagementComponent,
     ProductPerformanceComponent,
-    OrderTrackingComponent,
     OrderProcessingComponent,
-    CustomerProfilesComponent,
     SegmentationComponent,
     SuppliesListComponent,
     SuppliesManagementComponent,

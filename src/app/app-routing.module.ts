@@ -2,11 +2,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthentificationComponent } from './components/authentification/authentification.component';
 import { CustomerInsightsComponent } from './components/customer-insights/customer-insights.component';
-import { CustomerProfilesComponent } from './components/customer-insights/customer-profiles/customer-profiles.component';
 import { SegmentationComponent } from './components/customer-insights/segmentation/segmentation.component';
 import { OrdersComponent } from './components/orders/orders.component';
 import { OrderProcessingComponent } from './components/orders/order-processing/order-processing.component';
-import { OrderTrackingComponent } from './components/orders/order-tracking/order-tracking.component';
 import { OverviewComponent } from './components/overview/overview.component';
 import { InventorrySatutsComponent } from './components/overview/inventorry-satuts/inventorry-satuts.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
@@ -34,13 +32,11 @@ const routes: Routes = [
   {path: "home", data: {breadcrumb:"Home"} , component: HomeComponent , canActivate: [authGuardGuard] },
 
   {path: "customer-insights", data: {breadcrumb:"CustomerInsights"} , component: CustomerInsightsComponent , canActivate: [authGuardGuard], children: [
-    {path: "customer-profiles", data: {breadcrumb:"CustomerProfiles"} , canActivate: [authGuardGuard] , component: CustomerProfilesComponent},
     {path: "segmentation", data: {breadcrumb:"Segmentation"} , canActivate: [authGuardGuard] , component: SegmentationComponent}
   ]},
 
   {path: "orders", data: {breadcrumb:"Orders"} , component: OrdersComponent , canActivate: [authGuardGuard] , children: [
     {path: "orders-processing", data: {breadcrumb:"OrderProcessing"} , canActivate: [authGuardGuard] , component: OrderProcessingComponent},
-    {path: "orders-tracking", data: {breadcrumb:"OrderTracking"} , canActivate: [authGuardGuard] , component: OrderTrackingComponent}
   ]},
 
   {path: "overview", data: {breadcrumb:"Orders"} , component: OverviewComponent , canActivate: [authGuardGuard] , children: [

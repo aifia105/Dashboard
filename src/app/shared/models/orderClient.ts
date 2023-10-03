@@ -10,7 +10,7 @@ export interface orderClient {
     total : Number;
     orderStatus : string;
     client : client;
-    cart : cart;
+    cart ?: cart;
     product : product[];
     quantity : Number[]; 
     unit_price : Number[];
