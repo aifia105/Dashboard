@@ -1,5 +1,78 @@
 <div class="h-screen grid  p-3">
     <div class=" bg-gray-900  shadow-md shadow-gray-800  w-full  ">
+        <div class="flex items-center justify-between py-7 px-10">
+            <div>
+                <h1 class="text-sm  sm:text-2xl font-bold text-gray-500 ">Customers insights</h1>
+                <p class="text-sm font-semibold text-gray-500 ">Clients list:</p>
+            </div>
+        </div>
+
+        <table class="w-full border-b border-violet-900 ">
+            <thead>
+                <tr class="text-sm font-medium text-gray-500 border-y border-violet-900">
+                    <td class="py-4 px-4 text-center">Name</td>
+                    <td class="py-4 px-4 text-center">Email</td>
+                    <td class="py-4 px-4 text-center">Phone</td>
+                    <td class="py-4 px-4 text-center">Adresse</td>
+                    <td class="py-4 px-4 text-center ">Birthday</td>
+                    <td class="py-4 px-4 text-center ">Purchase history</td>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr  class="w-full hover:bg-gray-600  transition-colors group">
+                    <td class="text-center py-4 ">
+                        <span class="text-lg font-semibold text-white"> {{client.name}} </span>
+                    </td>
+                    <td class="font-medium text-center text-white">{{client.email }}</td>
+                    <td class="text-center text-white">
+                        <span class="font-medium">{{client.phone}}</span>
+                    </td>
+                    <td class="font-medium text-center text-white">{{client.adresse}}</td>
+                    <td class="font-medium text-center text-white">
+                        <span class="inline-block w-25  " >{{client.birthday | date}} </span>
+                    </td>
+                    <td class="font-medium text-center text-white">
+                        <div class="items-center w-25 text-white">
+                            <button (click)="toggleList()" class="p-2   hover:rounded-md hover:bg-gray-200 hover:text-gray-800 ">
+                                <svg [ngClass]="{'rotate180' : showList}" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-down-square" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm8.5 2.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/>
+                                  </svg>
+                            </button>
+                            </div>
+                    </td>
+                </tr>
+                <tr class="w-full" *ngIf="showList">
+                    <div class="  flex-row" >
+                        <div> text</div>
+                        <div> text</div>
+                        <div> text</div>
+                        <div> text</div>
+                        <div> text</div>
+                        
+
+                    </div>
+                </tr>
+            </tbody>
+        </table>
+
+
+
+        <div class="flex gap-x-2 justify-center pt-8">
+            <button class="flex justify-center items-center w-8 h-8 ">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-circle text-white" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+                  </svg>
+            </button>
+
+            <button class="flex justify-center items-center w-8 h-8 ">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle text-white" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+                  </svg>
+            </button>
+
+
+        </div>
         </div>
         </div>
 
